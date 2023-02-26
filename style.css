@@ -10,7 +10,7 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 body {
-  background-color: coral;
+  margin: 0;
 }
 article,
 aside,
@@ -1085,7 +1085,8 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
-  background-color: coral;
+  color: #333333;
+  background-color: #fff;
 }
 input,
 button,
@@ -6831,6 +6832,7 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+
 /*!
  * Bootstrap v3.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 Twitter, Inc.
