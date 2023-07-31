@@ -224,7 +224,29 @@
         max-width: 750px;
         text-align:center;
       }
+
+      .collapsible {
+        background-color: #777;
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+      }
       
+      .active, .collapsible:hover {
+        background-color: #555;
+      }
+      
+      .content {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        background-color: red;
+      }
     </style>
 
     
@@ -268,11 +290,32 @@
  <p>What should I expect during the ceremony?</p>
  <p>What should I expect after the ceremony?</p>
  <p>Do you have a registry?</p>
+
+ <button type="button" class="collapsible">Open Collapsible</button>
+ <div class="content">
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+ </div>
   
  <p>https://blog.wedsites.com/wedding-website-wording-examples-for-tricky-situations/</p>
 </div>
         
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
 
     </body>
 </html>
