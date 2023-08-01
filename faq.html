@@ -224,8 +224,8 @@
         max-width: 750px;
         text-align:center;
       }
-
-      .collapsible {
+      
+      .outcollapsible {
         background-color: #efe7dd;
         color: black;
         cursor: pointer;
@@ -233,6 +233,28 @@
         width: 100%;
         border-top: 2px solid #5A0903!important;
         border-bottom: 2px solid #5A0903!important;
+        border-left: none!important;
+        border-right: none!important;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        max-width: 800px;
+        display: flex!important;
+        justify-content: space-between!important;
+        font-family: "Times New Roman", Times, serif!important;
+        font-size: 20px!important;
+        padding:none;
+        margin:none;
+      }
+      
+      .collapsible {
+        background-color: #efe7dd;
+        color: black;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border-top: none!important;
+        border-bottom: none!important;
         border-left: none!important;
         border-right: none!important;
         text-align: left;
@@ -266,10 +288,13 @@
       }
 
       .smoly{
-        height: 70px;
+        height: 20px;
         width: auto;
       }
-      
+
+      .even{
+        margin: 1rem!important;
+      }
     </style>
 
     
@@ -305,12 +330,12 @@
 <div class="p-5 text-center bg-body-tertiary rectt"></div>  
 <div class="cage">
 
- <div class="collapsible"> 
+ <div class="outcollapsible"> 
    <button type="button" class="collapsible">When do I need to RSVP?</button>
    <img class="smoly" src="https://github.com/GarrettandClara/GarrettandClara.github.io/raw/main/plus.png"></img>
  </div>
  <div class="content">
-   <p>To ensure everyone a seat and a meal please RSVP by April 1st of 2024 at the latest. The earlier the better! Please ensure that you include the names of any (and only) those who are addressed on your invitation in your RSVP. Any permitted plus ones will be directly included and addressed on the invite.</p>
+   <div class="even">To ensure everyone a seat and a meal please RSVP by April 1st of 2024 at the latest. The earlier the better! Please ensure that you include the names of any (and only) those who are addressed on your invitation in your RSVP. Any permitted plus ones will be directly included and addressed on the invite.</div>
  </div>
   
  <button type="button" class="collapsible">What should I do if I can’t come?</button>
