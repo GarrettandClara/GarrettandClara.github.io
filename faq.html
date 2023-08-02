@@ -325,12 +325,12 @@
       }
       .accordion button:hover, .accordion button:focus {
         cursor: pointer;
-        color: #03b5d2;
+        color: black;
       }
       .accordion button:hover::after, .accordion button:focus::after {
         cursor: pointer;
-        color: #03b5d2;
-        border: 1px solid #03b5d2;
+        color: black;
+        border: 1px solid black;
       }
       .accordion button .accordion-title {
         padding: 1em 1.5em 1em 0;
@@ -389,6 +389,15 @@
         font-weight: 300;
         margin: 2em 0;
       }
+      .accordion-item {
+        color: var(--bs-accordion-color);
+        background-color: none!important;
+        border-top: 2px solid #5A0903!important;
+        border-bottom: 2px solid #5A0903!important;
+        border-left: none!important;
+        border-right: none!important;
+      }
+      
       h2{
         font-family: "Times New Roman", Times, serif!important;
         font-size: 30px!important;
