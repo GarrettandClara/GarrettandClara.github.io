@@ -562,6 +562,150 @@
         font-weight: 1000!important;
         text-decoration-line: underline!important;
       }
+
+
+
+
+
+
+
+      @media only screen and (max-width: 1000px)
+      {
+          .rectt{
+            min-width: 1px!important;
+          }
+          .logomf{
+            height: 150px!important;
+          }
+          .navbarr{
+            display: none!important;
+          }
+          .navy{
+            margin-bottom: 3rem!important;
+          }
+          .fancyfont{
+            padding-left: 1.5rem!important;
+            padding-right: 1.5rem!important;
+          }
+          .linee{
+            margin-left: 0.5rem!important;
+            margin-right: 0px!important;
+          }
+          .description {
+            margin-right: 10px!important;
+          }
+          .phototime {
+            height: 250px!important;
+          }
+          .timesqr {
+            flex-wrap: wrap!important;
+            justify-content: center!important;
+          }
+      }
+      @media only screen and (min-width: 1000px)
+      {
+          #menu{
+            display: none!important;
+          }
+      }
+
+      
+#menu {
+  z-index: 2;
+}
+
+#menu-bar {
+  width: 45px;
+  height: 40px;
+  margin: 30px 0 0px 20px;
+  cursor: pointer;
+}
+
+.bar {
+  height: 5px;
+  width: 100%;
+  background-color: #5A0903;
+  display: block;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+#bar1 {
+  transform: translateY(-4px);
+}
+
+#bar3 {
+  transform: translateY(4px);
+}
+
+.nav {
+  transition: 0.3s ease;
+  display: none;
+}
+
+.nav ul {
+  padding: 0 22px;
+}
+
+.nav li {
+  list-style: none;
+  padding: 12px 0;
+}
+
+.nav li a {
+  color: #efe7dd;
+  font-family: 'Cinzel', serif;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.nav li a:hover {
+  font-weight: bold;
+}
+
+.menu-bg, #menu {
+  top: 250px;
+  left: 0;
+  position: absolute;
+  border-color: #5A0903;
+}
+
+.menu-bg {
+  z-index: 1;
+  width: 0;
+  height: 0;
+  margin: 100px 0 20px 20px;
+  background: radial-gradient(circle, #5a0903cc, #5a0903);
+  border-radius: 50%;
+  border-color: #5A0903;
+  transition: 0.3s ease;
+}
+
+.change {
+  display: block;
+}
+
+.change .bar {
+  background-color: #efe7dd;
+}
+
+.change #bar1 {
+  transform: translateY(4px) rotateZ(-45deg);
+}
+
+.change #bar2 {
+  opacity: 0;
+}
+
+.change #bar3 {
+  transform: translateY(-6px) rotateZ(45deg);
+}
+
+.change-bg {
+  width: 520px;
+  height: 460px;
+  transform: translate(-60%,-30%);
+}
     </style>
 
     
@@ -583,7 +727,24 @@
     <p class = "fancyfont">May 19th, 2024| Leesburg, VA</p>
   <div class="p-5 text-center bg-body-tertiary rectt"></div>  
 </div>
-
+<div id="menu">
+  <div id="menu-bar" onclick="menuOnClick()">
+    <div id="bar1" class="bar"></div>
+    <div id="bar2" class="bar"></div>
+    <div id="bar3" class="bar"></div>
+  </div>
+  <nav class="nav" id="nav">
+    <ul>
+      <li><a href="index">Home</a></li>
+      <li><a href="ourStory">Our Story</a></li>
+      <li><a href="theWedding">The Wedding</a></li>
+      <li><a href="faq">FAQ</a></li>
+      <li><a href="photos">Photos</a></li>
+      <li><a href="rsvp">RSVP</a></li>
+    </ul>
+  </nav> 
+</div>
+<div class="menu-bg" id="menu-bg"></div>
 <div class = "navbarr">
     <a href="index" class = "fatfancyfont">Home</a>
     <a href="ourStory" class = "fatfancyfont">Our Story</a>
@@ -729,6 +890,13 @@ for (i = 0; i < coll.length; i++) {
       content.style.display = "block";
     }
   });
+}
+</script>
+    <script>
+  function menuOnClick() {
+  document.getElementById("menu-bar").classList.toggle("change");
+  document.getElementById("nav").classList.toggle("change");
+  document.getElementById("menu-bg").classList.toggle("change-bg");
 }
 </script>
     </body>
